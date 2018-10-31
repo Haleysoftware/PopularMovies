@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Movie Time</string>
+    <string name="detail_name">Movie Details</string>
+
+    <string name="pop_name">Most Popular Movies</string>
+    <string name="top_name">Top Rated Movies</string>
+    <string name="fav_name">Favorite Movies</string>
+
+    <string name="poster_description">The poster for the movie.</string>
+
+    <string name="detail_release">Released</string>
+    <string name="detail_vote">Average Vote</string>
+    <string name="detail_overview">Overview</string>
+    <string name="detail_trailer">Trailers</string>
+    <string name="detail_review">Reviews</string>
+
+    <string name="no_internet">Internet was not found.\nPlease see favorites for offline viewing.</string>
+    <string name="no_favorites">It looks like you don\'t have any favorite movies yet.\nLook around\, there are some nice ones</string>
+    <string name="no_trailer">We don\'t have any trailers for $s.</string>
+    <string name="no_review">We don\'t have any reviews for $s.</string>
+
+    <string name="no_release">NA</string>
+    <string name="no_votes">NA</string>
+    <string name="no_overview">No overview was found</string>
+</resources>

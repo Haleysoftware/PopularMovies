@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        tools:layout_editor_absoluteY="81dp">
+
+        <TextView
+            android:id="@+id/tv_title_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="The next great movie title" />
+
+        <ImageView
+            android:id="@+id/iv_poster_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="15dp"
+            android:contentDescription="@string/poster_description"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_detail"
+            tools:layout_height="220dp"
+            tools:layout_width="185dp"
+            tools:srcCompat="@android:color/holo_orange_dark" />
+
+        <TextView
+            android:id="@+id/textView_release"
+            style="@style/HeaderText"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/detail_release"
+            app:layout_constraintStart_toEndOf="@+id/iv_poster_detail"
+            app:layout_constraintTop_toBottomOf="@+id/iv_favorite" />
+
+        <TextView
+            android:id="@+id/tv_released_detail"
+            style="@style/DetailText"
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toStartOf="@+id/textView_release"
+            app:layout_constraintTop_toBottomOf="@+id/textView_release"
+            tools:text="June 25, 2018" />
+
+        <TextView
+            android:id="@+id/textView_vote"
+            style="@style/HeaderText"
+            android:layout_marginStart="28dp"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/detail_vote"
+            app:layout_constraintStart_toEndOf="@+id/iv_poster_detail"
+            app:layout_constraintTop_toBottomOf="@+id/tv_released_detail" />
+
+        <TextView
+            android:id="@+id/tv_vote_detail"
+            style="@style/DetailText"
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toStartOf="@+id/textView_vote"
+            app:layout_constraintTop_toBottomOf="@+id/textView_vote"
+            tools:text="7.0" />
+
+        <TextView
+            android:id="@+id/textView_overview"
+            style="@style/HeaderText"
+            android:layout_marginTop="20dp"
+            android:text="@string/detail_overview"
+            app:layout_constraintStart_toStartOf="@+id/iv_poster_detail"
+            app:layout_constraintTop_toBottomOf="@+id/iv_poster_detail" />
+
+        <TextView
+            android:id="@+id/tv_overview_detail"
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView_overview"
+            app:layout_constraintTop_toBottomOf="@+id/textView_overview"
+            tools:text="This is a really long overview for some movie. This needs to be a lot longer. I mean a lot longer, like it might feel way too long but it needs to be longer" />
+
+        <ImageView
+            android:id="@+id/iv_favorite"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.652"
+            app:layout_constraintStart_toEndOf="@+id/iv_poster_detail"
+            app:layout_constraintTop_toBottomOf="@+id/tv_title_detail"
+            app:srcCompat="@drawable/ic_favorite_border_24dp" />
+
+        <TextView
+            android:id="@+id/textView_trailer"
+            style="@style/HeaderText"
+            android:layout_marginTop="20dp"
+            android:text="@string/detail_trailer"
+            app:layout_constraintStart_toStartOf="@+id/textView_overview"
+            app:layout_constraintTop_toBottomOf="@+id/tv_overview_detail" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_trailer_detail"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_trailer" />
+
+        <TextView
+            android:id="@+id/textView_review"
+            style="@style/HeaderText"
+            android:text="@string/detail_review"
+            app:layout_constraintStart_toStartOf="@+id/textView_trailer"
+            app:layout_constraintTop_toBottomOf="@+id/rv_trailer_detail" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_review_detail"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView_review" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>
